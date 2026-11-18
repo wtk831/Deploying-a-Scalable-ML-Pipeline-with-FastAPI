@@ -27,3 +27,33 @@ Working in a command line environment is recommended for ease of use with git an
 *  Create a RESTful API using FastAPI this must implement:
     * GET on the root giving a welcome message.
     * POST that does model inference.
+
+## Dataset Retrieval
+
+The census dataset is tracked locally using Data Version
+Control (DVC). The tracking metadata is stored in
+`data/census.csv.dvc`.
+
+The original dataset is also available in the repository's
+Git history. After cloning the repository with its full
+history, the dataset can be restored using:
+
+```bash
+git restore --source=b640cf0dea2252000fe7ec9881904ec95c92ca76 --worktree -- data/census.csv
+```
+
+After installing DVC, run the following commands to populate
+the local DVC cache and verify the dataset:
+
+```bash
+dvc add data/census.csv
+dvc status
+```
+
+The dataset was verified against the original MD5 hash:
+
+`9bae038b4f0565b340ce3f11ac86f060`
+
+No external DVC remote is currently configured.
+```
+
