@@ -109,7 +109,7 @@ The model has several limitations:
 
 - The census dataset may not reflect current economic
   conditions or income distributions.
-- Missing information represented by question marks  may negatively affect model performance.
+- Missing information represented by question marks  may   negatively affect model performance.
 - Some categorical groups contain very few records,
   making their performance metrics unreliable.
 - The Never-worked category contains only one       evaluation record, so its perfect scores should be interpreted cautiously.
